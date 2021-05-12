@@ -14,7 +14,8 @@ objList   := $(patsubst %.c, $(obj_dir)/%.o, $(nodirList))
 
 c_compile_flags := -g -Wall -c
 
-
+vpath %.c $(src)
+vpath %.o $(obj_dir)
 
 $(target): $(objList)
 # all: $(objList)
