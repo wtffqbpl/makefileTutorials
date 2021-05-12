@@ -14,7 +14,10 @@ objList   := $(patsubst %.c, $(obj_dir)/%.o, $(nodirList))
 
 c_compile_flags := -g -Wall -c
 
+# search *.c in src directory.
 vpath %.c $(src)
+
+# search *.o files in $(obj_dir) directory.
 vpath %.o $(obj_dir)
 
 $(target): $(objList)
