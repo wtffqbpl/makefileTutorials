@@ -20,6 +20,12 @@ vpath %.c $(src)
 # search *.o files in $(obj_dir) directory.
 vpath %.o $(obj_dir)
 
+# warning output (process will be continue)
+$(warning "output something you want to debug")
+
+# $(error "Output sth, and exit from this line")
+
+
 $(target): $(objList)
 # all: $(objList)
 	@echo $(filelist)
