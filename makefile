@@ -25,6 +25,11 @@ $(warning "output something you want to debug")
 
 # $(error "Output sth, and exit from this line")
 
+# if you want to include some files that will be generated later, 
+# you can use '-' before include keyword.
+# this means make would ignore imported error.
+# -include test.mk
+
 
 $(target): $(objList)
 # all: $(objList)
